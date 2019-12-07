@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dciotas</title>
+    <title>DC Iotas</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
     <%= yield %>
+
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+        <b>Contact</b>
+        <br />
+        iptbetaomega.secretary@gmail.com
+        <br />
+        PO Box 55691
+        <br />
+        Washington DC, 20040
+        </div>
+
+        <div class="col-4 social">
+          <b>Social</b>
+          <br />
+          <br />
+          <%= link_to 'https://www.facebook.com/iptbetaomega/' do %>
+          <span class="fa fa-facebook fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://www.twitter.com/iptbetaomega' do %>
+          <span class="fa fa-twitter fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://www.instagram.com/betaomega/' do %>
+          <span class="fa fa-instagram fa-2x social-button"></span>
+          <% end %>
+        </div>
+
+      <div style="float:right;">
+        <%= image_tag "dciotas.png", class: 'logo-image'  %>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
   </body>
 </html>

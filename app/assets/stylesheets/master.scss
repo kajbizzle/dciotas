@@ -1,0 +1,74 @@
+@import "bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Adamina&display=swap');
+
+.clear {
+  clear: both;
+}
+
+.links {
+  padding-top: 26px;
+}
+
+.links a {
+  color: #ffbf00;
+  font-size: 25px;
+  border-bottom: 1px solid #dfdfdf;
+  padding-left: 15px;
+
+}
+
+.hero {
+  background: image_url('bologolarge.jpg') no-repeat center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 350px;
+}
+
+.logo-bio{
+  width: 200px;
+  height: 200px;
+}
+
+.calendar {
+  margin: auto;
+}
+
+.eboard-name{
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.maintext {
+  text-align: center;
+  white-space: pre-wrap;
+  text-size: 12px;
+  font-family: 'Adamina', serif;
+}
+
+.image-txt-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row
+}
+
+body {
+  background: image_url('funky-lines.png');
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+hr {
+  width: 18%;
+  color: #463c3c;
+  background-color: #463c3c;
+  height: 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
