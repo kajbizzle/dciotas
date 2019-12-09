@@ -10,20 +10,24 @@
 
     <%= yield %>
 
+  <div style="margin: auto">
+    <%= image_tag "dciotas.png", class: 'logo-image'  %>
+  </div>
+
   <div id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col">
         <b>Contact</b>
         <br />
-        iptbetaomega.secretary@gmail.com
+        <%= mail_to 'iptbetaomega.secretary@gmail.com', "Email Us" %>
         <br />
         PO Box 55691
         <br />
         Washington DC, 20040
         </div>
 
-        <div class="col-4 social">
+        <div class="social">
           <b>Social</b>
           <br />
           <br />
@@ -38,9 +42,6 @@
           <% end %>
         </div>
 
-      <div style="float:right;">
-        <%= image_tag "dciotas.png", class: 'logo-image'  %>
-      </div>
 
       </div>
     </div>

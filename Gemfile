@@ -71,3 +71,9 @@ end
 
 #Font Awesome
 gem "font-awesome-rails"
+
+#Stripe
+gem 'stripe'
+
+#Figaro
+gem 'figaro'

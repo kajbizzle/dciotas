@@ -11,8 +11,8 @@
       </div>
     </div>
 
-<p>
-<p>
+<p />
+<p />
 
 <h3 style="text-align:center;white-space:pre-wrap;">The DC Iotas</h3>
 <p class="maintext">Welcome to the website of the Beta Omega Alumni Chapter of Iota Phi Theta Fraternity Inc.
@@ -25,8 +25,26 @@
   If you have the desire to get involved and help make a positive difference in the lives of young people, we would welcome the opportunity to meet with you to discuss how your skills best use to help improve the negative socio-economic conditions that plague our community’s most deserving citizens.</p>
 
 <hr />
+      <div style="margin: auto">
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+            <label class="amount">
+              <span>Chapter Dues: $150.00</span>
+            </label>
+          </article>
 
-
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="Chapter Dues"
+                  data-amount="15000"
+                  data-locale="auto"></script>
+        <% end %>
+      </div>
 
 <hr />
 
@@ -118,8 +136,9 @@
 
 <br />
 <div class="calendar">
-  <iframe src="https://calendar.google.com/calendar/embed?src=iptbetaomega.secretary%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=aXB0YmV0YW9tZWdhLnNlY3JldGFyeUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2322AA99&amp;color=%23329262&amp;color=%231F753C" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
+
 <br />
 
 <hr />
