@@ -1,0 +1,41 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <br />
+  <br />
+  <h1 class="text-center"><%= @due.title %></h1>
+  <br />
+  <div class="row">
+    <div class="col-sm-4 col-12 text-center">
+      <span class="badge badge-default">
+      <%= number_to_currency @due.amount %>
+      </span>
+    </div>
+    <div class="col-sm-4 col-12">
+      <%= @due.description %>
+    </div>
+      <br />
+      <br />
+      <% if current_user && current_user.enrolled_in?(@due) %>
+      <div style="margin: auto">
+        <h3 class="badge badge-info">You Are Financial!</h3>
+      </div>
+      <% else %>
+      <div style="margin: auto">
+        <h3 class="badge badge-info">You Are NOT Financial!</h3>
+      </div>
+        <div style="margin: auto">
+          <%= form_tag due_enrollments_path(@due) do %>
+
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-email="<%= current_user.email %>"
+                    data-description="<%= @due.title %> (<%= number_to_currency @due.amount %>)"
+                    data-amount="<%= (@due.amount * 100).to_i %>"
+                    data-locale="auto"></script>
+          <% end %>
+        </div>
+      <% end %>
+  </div>
+    <br />
+    <br />
+</div>

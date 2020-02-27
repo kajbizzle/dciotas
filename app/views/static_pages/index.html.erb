@@ -25,28 +25,6 @@
   If you have the desire to get involved and help make a positive difference in the lives of young people, we would welcome the opportunity to meet with you to discuss how your skills best use to help improve the negative socio-economic conditions that plague our community’s most deserving citizens.</p>
 
 <hr />
-      <div style="margin: auto">
-        <%= form_tag charges_path do %>
-          <article>
-            <% if flash[:error].present? %>
-              <div id="error_explanation">
-                <p><%= flash[:error] %></p>
-              </div>
-            <% end %>
-            <label class="amount">
-              <span>Chapter Dues: $150.00</span>
-            </label>
-          </article>
-
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="Chapter Dues"
-                  data-amount="15000"
-                  data-locale="auto"></script>
-        <% end %>
-      </div>
-
-<hr />
 
 <div class="container">
   <div class="row">
