@@ -88,3 +88,6 @@ gem 'devise'
 
 #Simple Form
 gem 'simple_form'
+
+#Humanizer
+gem "humanizer"
